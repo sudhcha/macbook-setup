@@ -24,3 +24,10 @@ if exists code; then
 else
 	brew install --cask visual-studio-code
 fi
+
+if exists jupyter notebook; then
+	echo "Anaconda/Jupyter Notebook already installed"
+else
+	brew install --cask anaconda
+	echo "PATH=$HOME/brew/anaconda3/bin:$PATH" > ~/.zshrc
+fi
